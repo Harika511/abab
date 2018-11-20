@@ -1,0 +1,25 @@
+<p>
+  success works!
+</p>
+<p>{{success}}</p>
+
+<input type="text" class="form-control" 
+(input)="onUpdateServerName($event)"> 
+<input type="text" class="form-control" [(ngModel)]="serverName">
+  
+      <p>{{serverName}}</p>
+<button class="btn btn-primary" [disabled]="!val"
+ (click)="clicked()">Server Message</button>
+<p> {{val}}</p>
+<p>{{network}}</p>
+<input type="text" class="form-control" [(ngModel)]="name">
+<p>{{name}}</p>
+<button class="btn btn-primary" [disabled]="!name" (click)=displayName()>Enabled</button>
+<p [ngStyle]="{'color':'red'}">ngIf using </p>
+<button class="btn btn-primary" *ngIf=showBt>display</button>
+<div *ngFor = 'let lst of variables'> 
+    <ul> 
+        
+       <li>{{lst.Name}}</li> 
+    </ul> 
+ </div> 
