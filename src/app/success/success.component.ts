@@ -42,6 +42,6 @@ displayName(){
   this.name="";
   this.showBt=true;
 }
-
+birthday = new Date(1988, 3, 15); // April 15, 1988
 
 }
