@@ -7,9 +7,14 @@ import { ServersComponent } from './servers/servers.component';
 import { WarnComponent } from './warning/warn.component';
 import { SuccessComponent } from './success/success.component'
 
+  import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+
 @NgModule({
   declarations: [
-    AppComponent,ServerComponent, ServersComponent,WarnComponent, SuccessComponent
+    AppComponent,ServerComponent, ServersComponent,WarnComponent,
+     SuccessComponent,ParentComponent,ChildComponent
+
 
   ],
   imports: [
