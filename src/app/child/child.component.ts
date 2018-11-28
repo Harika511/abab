@@ -1,35 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+// import { Component, Input } from '@angular/core';
+
+// @Component({
+//   selector: 'app-child',
+//   // template: `
+//   //     Say {{ childMessage }}
+//   // `,
+//   template: `  `,
+//   styleUrls: ['./child.component.css']
+// })
+// export class ChildComponent {
+
+//   //@Input() childMessage: string;
+//   message = 'Hola Mundo!';
+//   constructor() { }
+
+// }
+
+import { Component, Output, EventEmitter } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-child',
-  templateUrl: './child.component.html',
-  // template: ` @Input
-  //     Say {{ message }}
-  // `,
-// @output
-//   template: `
-//   <button (click)="sendMessage()">Send Message</button>
-// `,
+  template: ` <button (click)="sendMessage()">Send Message</button> `, 
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit {
+export class ChildComponent {
+
+  message: string = "Hola Mundo!"
+
+  @Output() messageEvent = new EventEmitter<string>();
 
   constructor() { }
 
-  ngOnInit() {
+  sendMessage() {
+    this.messageEvent.emit(this.message)
   }
 
-  message = 'Hola Mundo!';
-// @Input() childMessage: string;
- //@output
-//  message: string = "Hola Mundo!"
-
-//   @Output() messageEvent = new EventEmitter<string>();
-
-//   constructor() { }
-
-//   sendMessage() {
-//     this.messageEvent.emit(this.message)
-//   }
-
+  
 }
