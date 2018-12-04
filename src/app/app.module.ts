@@ -16,6 +16,9 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { Appproduct } from './product/product.component';
 import { AppInventory } from './inventory/Inventory.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ExampleComponent } from './example/example.component';
+import { ReceivedComponent } from './received/received.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
    { path: 'Product', component: Appproduct },
@@ -26,11 +29,13 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,ServerComponent, ServersComponent,WarnComponent,
      SuccessComponent,ParentComponent,ChildComponent, 
-     SiblingComponent, LifecycleComponent, Appproduct, AppInventory
+     SiblingComponent, LifecycleComponent, Appproduct, AppInventory, 
+     ExampleComponent, ReceivedComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule, RouterModule.forRoot(appRoutes)
+    FormsModule, HttpClientModule
+    ,RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -59,28 +59,40 @@
 //   }
 // }
 
-import { Component } from '@angular/core';//@output
+// import { Component } from '@angular/core';//@output
 
-@Component({
-  selector: 'app-parent',
-  template: `
-    Message: {{message}}
-    <app-child (messageEvent)="receiveMessage($event)"></app-child>
-    <ul>
+// @Component({
+//   selector: 'app-parent',
+//   template: `
+//     Message: {{message}}
+//     <app-child (messageEvent)="receiveMessage($event)"></app-child>
+//     <ul>
+//       <li><a [routerLink] = "['/Product']">Product</a></li>
+//       <li><a [routerLink] = "['/Inventory']">Inventory</a></li>
+//    </ul>
+//    <router-outlet></router-outlet>  `,
+//   styleUrls: ['./parent.component.css']
+// })
+// export class ParentComponent {
+
+//   constructor() { }
+
+//   message:string;
+
+//   receiveMessage($event) {
+//     this.message = $event
+//   }
+// }
+
+import { Component } from '@angular/core';
+
+@Component ({
+   selector: 'app-parent',
+   template: `
+   <ul>
       <li><a [routerLink] = "['/Product']">Product</a></li>
       <li><a [routerLink] = "['/Inventory']">Inventory</a></li>
    </ul>
-   <router-outlet></router-outlet>
-    `,
-  styleUrls: ['./parent.component.css']
+   <router-outlet></router-outlet>`
 })
-export class ParentComponent {
-
-  constructor() { }
-
-  message:string;
-
-  receiveMessage($event) {
-    this.message = $event
-  }
-}
+export class ParentComponent  { }
